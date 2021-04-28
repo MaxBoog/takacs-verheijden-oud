@@ -1,0 +1,168 @@
+.no-padding {
+  padding: 0 !important;
+}
+.h1 {
+  color: rgb(174, 202, 196);
+  margin-top: 0px !important;
+  font-family: "Roboto", sans-serif;
+  z-index: 1 !important;
+}
+.h2 {
+  margin-top: 55px;
+}
+.txt-small {
+  padding: 30px !important;
+}
+.padding-top {
+  padding-top: 40px;
+}
+@media (min-width: 768px) {
+  .txt-small {
+    padding: 50px !important;
+  }
+  .fixed-pos {
+    position: fixed;
+  }
+  .sticky {
+    position: fixed;
+    top: 260px;
+    width: 552px;
+    height: 231px;
+    left: 50%;
+    margin-left: -50%;
+    padding-left: 15px;
+    text-align: left;
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .txt-small {
+    padding: 80px !important;
+  }
+  .sticky {
+    position: fixed;
+    top: 330px;
+    width: 552px;
+    height: 231px;
+    left: 50%;
+    margin-left: -50%;
+    padding-left: 15px;
+    text-align: left;
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .txt-small {
+    padding: 80px !important;
+  }
+  .sticky {
+    position: fixed;
+    top: 380px;
+    width: 552px;
+    height: 231px;
+    left: 50%;
+    margin-left: -585px;
+    text-align: left;
+  }
+}
+#stick0 {
+  z-index: 10;
+  height: 231px;
+  display: block;
+  text-align: left;
+}
+#stick1 {
+  z-index: 20;
+  height: 231px;
+  display: block;
+  text-align: left;
+}
+#stick2 {
+  z-index: 30;
+  height: 231px;
+  display: block;
+  text-align: left;
+}
+#stick3 {
+  z-index: 40;
+  height: 231px;
+  display: block;
+  text-align: left;
+}
+#stick4 {
+  z-index: 50;
+  height: 231px;
+  display: block;
+  text-align: left;
+}
+#stick5 {
+  z-index: 60;
+  height: 231px;
+  display: block;
+  text-align: left;
+}
+#stick6 {
+  z-index: 70;
+  height: 231px;
+  display: block;
+  text-align: left;
+}
+#stick7 {
+  z-index: 80;
+  height: 231px;
+  display: block;
+  text-align: center;
+}
+#stick8 {
+  z-index: 90;
+  height: 231px;
+  display: block;
+  text-align: center;
+}
+#stick9 {
+  z-index: 100;
+  height: 231px;
+  display: block;
+  text-align: center;
+}
+a.bttn {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  color: #ffffff;
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: rgb(174, 202, 196);
+  border-radius: 24px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding: 10px 20px 10px 20px;
+}
+.pdfblock {
+  padding: 10px 0 0 20px;
+}
+/*
+       FILE ARCHIVED ON 10:03:21 Jan 31, 2019 AND RETRIEVED FROM THE
+       INTERNET ARCHIVE ON 15:54:26 Apr 28, 2021.
+       JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+  
+       ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+       SECTION 108(a)(3)).
+  */
+/*
+  playback timings (ms):
+    esindex: 0.027
+    PetaboxLoader3.resolve: 905.546 (3)
+    exclusion.robots: 0.364
+    exclusion.robots.policy: 0.343
+    LoadShardBlock: 664.455 (3)
+    PetaboxLoader3.datanode: 643.172 (5)
+    load_resource: 1313.194 (2)
+    CDXLines.iter: 63.273 (3)
+    RedisCDXSource: 10.75
+    captures_list: 744.367
+  */

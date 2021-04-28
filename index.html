@@ -1,0 +1,696 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"/>
+<title>Takacs &amp; Verheijden</title>
+
+<!-- Bootstrap -->
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/eurorue.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via  -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery-bigtext.js"></script>
+<script>
+var hoogte = 231;
+function onload() {
+
+  $('.h1').bigText({
+  		fontSizeFactor: 1, 
+		limitingDimension: "width",
+		verticalAlign: "top",
+		textAlign: "left"
+  });
+  
+  var screenwidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+  
+var $menu0 = $('#stick0');
+var sessionTop0 = $('#Welkom').offset().top;
+var $menu1 = $('#stick1');
+var sessionTop1 = $('#Werk').offset().top;
+var $menu2 = $('#stick2');
+var sessionTop2 = $('#Over').offset().top;
+var $menu3 = $('#stick3');
+var sessionTop3 = $('#Contact').offset().top;
+
+  var scrolltop = $(document).scrollTop();
+  if (screenwidth>=768) {
+  	 $menu0.addClass('sticky');
+
+
+  						  $menu1.toggleClass('sticky', scrolltop >= sessionTop1);
+  						  $menu0.css('opacity',1-(scrolltop+340-sessionTop1)/(340));
+  						  $menu2.toggleClass('sticky', scrolltop >= sessionTop2);
+  						  $menu1.css('opacity',1-(scrolltop+340-sessionTop2)/(340));
+  						  $menu3.toggleClass('sticky', scrolltop >= sessionTop3);
+  						  $menu2.css('opacity',1-(scrolltop+340-sessionTop3)/(340));
+  
+  } 
+  $(window).scroll(function(e) {
+   		var scrolltop = $(document).scrollTop();
+		if (screenwidth>=768) {
+  						  $menu1.toggleClass('sticky', scrolltop >= sessionTop1);
+						  $menu0.css('opacity',1-(scrolltop+340-sessionTop1)/(340));
+  						  $menu2.toggleClass('sticky', scrolltop >= sessionTop2);
+						  $menu1.css('opacity',1-(scrolltop+340-sessionTop2)/(340));
+  						  $menu3.toggleClass('sticky', scrolltop >= sessionTop3);
+						  $menu2.css('opacity',1-(scrolltop+340-sessionTop3)/(340));
+  
+		}
+  });
+$('#accordion1, #accordion2, #accordion3, #accordion4').on("shown.bs.collapse", function(){
+ //trigger content change
+ //this code will be triggered when the collapse transition is completed 
+ //that is your myCollapsible element will have 'in' in your class
+  				console.log('clicked');
+		var scrolltop = $(document).scrollTop();
+sessionTop0 = $('#Welkom').offset().top;
+sessionTop1 = $('#Werk').offset().top;
+sessionTop2 = $('#Over').offset().top;
+sessionTop3 = $('#Contact').offset().top;
+
+		if (screenwidth>=768) {
+  			   $menu1.toggleClass('sticky', scrolltop >= sessionTop1);
+			   $menu0.css('opacity',1-(scrolltop+340-sessionTop1)/(340));
+  			   $menu2.toggleClass('sticky', scrolltop >= sessionTop2);
+			   $menu1.css('opacity',1-(scrolltop+340-sessionTop2)/(340));
+  			   $menu3.toggleClass('sticky', scrolltop >= sessionTop3);
+			   $menu2.css('opacity',1-(scrolltop+340-sessionTop3)/(340));
+
+		}
+		console.log('scrolltop='+scrolltop + ' sessionTop4=' + sessionTop4);
+  });
+$('#accordion1, #accordion2, #accordion3, #accordion4').on("hidden.bs.collapse", function(){
+		var scrolltop = $(document).scrollTop();
+sessionTop0 = $('#Welkom').offset().top;
+sessionTop1 = $('#Werk').offset().top;
+sessionTop2 = $('#Over').offset().top;
+sessionTop3 = $('#Contact').offset().top;
+
+		if (screenwidth>=768) {
+  			   $menu1.toggleClass('sticky', scrolltop >= sessionTop1);
+			   $menu0.css('opacity',1-(scrolltop+340-sessionTop1)/(340));
+  			   $menu2.toggleClass('sticky', scrolltop >= sessionTop2);
+			   $menu1.css('opacity',1-(scrolltop+340-sessionTop2)/(340));
+  			   $menu3.toggleClass('sticky', scrolltop >= sessionTop3);
+			   $menu2.css('opacity',1-(scrolltop+340-sessionTop3)/(340));
+
+		}
+  });
+}
+$( window ).on( 'orientationchange', function( event ) {
+  location.reload();
+});
+</script>
+</head>
+<body onload="onload();" data-spy="scroll" data-target=".navbar">
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Takacs &amp; Verheijden</a>
+    </div>
+    <div id="navbar" class="collapse show-footer navbar-collapse">
+      <ul class="nav navbar-nav">
+<li><a href="#Welkom">WELKOM</a></li><li><a href="#Werk">WERK</a></li><li><a href="#Over">OVER</a></li><li><a href="#Contact">CONTACT</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<div class="container">
+	 <div class="row">
+	 	  <div class="col-sm-6 no-padding fixed-pos">
+		  	   <img src="/images/Logo.png" alt="" border="0" class="img-responsive">
+		  </div>
+	 </div>
+
+	 <section id="Welkom">
+	 <div class="row">
+	 	  <div class="col-sm-6 col-sm-offset-6 hidden-xs no-padding"><img src="/images/1_afbeelding6-site-6.jpg" border="0" class="img-responsive"/></div>
+	 </div>
+	 <div class="row">
+	 	  <div class="col-sm-6 padding-top"><div class="h1 text-uppercase"><span id="stick0">Welkom</span></div></div>
+	 	  <div class="col-sm-6 hidden-xs txt-small">
+	<h2>Leiderschap in de academie</h2><p class="p1"><span style="font-size: 14px;">De universiteit is grenzeloos. Een carri&egrave;re in de wetenschap vergt veel van mensen. Het onderzoek is nooit 'klaar' en je onderwijs kan altijd beter. Bovendien </span><span style="font-size: 14px;">is de noodzaak om samen te werken sterk toegenomen. En dat betekent afstemmen, belangen verkennen, prioriteiten stellen, collega&rsquo;s om medewerking vragen, afspraken maken en ze vervolgens aan die afspraken houden. Samenwerken betekent ook: helder communiceren, gewauwel confronteren, mensen motiveren en grenzen aangeven.</span></p>
+<p><span style="font-size: 14px;">Leiding geven dus. </span></p>
+<p><span style="font-size: 14px;">Andere wetenschappers begeleiden en coachen is een vak apart en iedereen kan het leren - of er in elk geval beter in worden.&nbsp;</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+<p class="p1"><span style="font-size: 14px;">&nbsp;</span></p>
+<p class="p1"><span class="s1" style="font-size: 14px;">&nbsp;</span></p>
+<p><br class="Apple-interchange-newline"/><span style="font-size: 14px;">&nbsp;</span></p>
+		  </div>
+	 </div>
+	
+	 <div class="row">
+	 	  <div class="col-sm-6 visible-xs no-padding"><img src="/images/1_afbeelding6-site-6.jpg" border="0" class="img-responsive"/></div>
+	 	  <div class="col-sm-6 visible-xs txt-small"><p class="p1"><span style="font-size: 14px;">De universiteit is grenzeloos. Een carri&egrave;re in de wetenschap vergt veel van mensen. Het onderzoek is nooit 'klaar' en je onderwijs kan altijd beter. Bovendien </span><span style="font-size: 14px;">is de noodzaak om samen te werken sterk toegenomen. En dat betekent afstemmen, belangen verkennen, prioriteiten stellen, collega&rsquo;s om medewerking vragen, afspraken maken en ze vervolgens aan die afspraken houden. Samenwerken betekent ook: helder communiceren, gewauwel confronteren, mensen motiveren en grenzen aangeven.</span></p>
+<p><span style="font-size: 14px;">Leiding geven dus. </span></p>
+<p><span style="font-size: 14px;">Andere wetenschappers begeleiden en coachen is een vak apart en iedereen kan het leren - of er in elk geval beter in worden.&nbsp;</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+<p class="p1"><span style="font-size: 14px;">&nbsp;</span></p>
+<p class="p1"><span class="s1" style="font-size: 14px;">&nbsp;</span></p>
+<p><br class="Apple-interchange-newline"/><span style="font-size: 14px;">&nbsp;</span></p></div>
+	 </div>
+	
+	 </section>
+	
+	 <section id="Werk">
+	 <div class="row">
+	 	  <div class="col-sm-6 col-sm-offset-6 hidden-xs no-padding"><img src="/images/2_boot1-eenvoud.jpg" border="0" class="img-responsive"/></div>
+	 </div>
+	 <div class="row">
+	 	  <div class="col-sm-6 padding-top"><div class="h1 text-uppercase"><span id="stick1">Werk</span></div></div>
+	 	  <div class="col-sm-6 hidden-xs txt-small">
+	<h2>Het bootje uit het riet</h2><p><span style="font-size: 14px;">De universiteit lijkt nergens op. Het is geen bedrijf maar wel een organisatie. Leidinggeven is hier wezenlijk iets anders dan elders in de maatschappij. Er is geen sprake van winst, maar rode cijfers bestaan wel en zijn verboden. Leidinggeven is vooral een dienst aan de gemeenschap en niet zoals elders: een stap vooruit in de loopbaan. Leidinggevende en leiding-ontvangende kunnen van positie wisselen, de verantwoordelijkheden zijn beduidend groter dan de bevoegdheden en de afwegingen die op de verschillende bestuurlijke niveaus gemaakt worden kunnen behoorlijk verschillen.</span></p>
+<p><span style="font-size: 14px;">Wetenschappers zijn intrinsiek zeer gedreven om het beste te geven in onderwijs, onderzoek en pati&euml;ntenzorg, maar goede intenties kunnen soms onbedoelde en zelfs desastreuze effecten hebben. Zelfreflectie, feedback, collegiale consultatie en open communicatie helpen om kritisch te blijven op jezelf en daarmee ruimte te scheppen voor een veilige en uitnodigende gemeenschap van medewerkers en studenten. Leidinggevenden spelen hier een cruciale rol.</span></p>
+<p class="p1"><span style="font-size: 14px;">Wij zijn zelf geen wetenschappers, maar we hebben wel genoeg ervaring om een andere invalshoek te kunnen bieden. Aan goede plannen en intenties ontbreekt het meestal niet. Wel blijkt het lastig om voornemens ook werkelijk uit te voeren. Soms helpt een flinke duw, een echt gesprek, of een paradoxale interventie om het bootje uit het riet te krijgen.</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+		  </div>
+	 </div>
+	
+	 <div class="row">
+	 	  <div class="col-sm-6 hidden-xs col-sm-offset-6">
+		  	   <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+	   
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading2_1">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse2_1" aria-expanded="true" aria-controls="collapse2_1">
+                          COACHING
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse2_1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2_1">
+                      <div class="panel-body">
+                	  	    <h3>Coaching</h3><p><span style="font-size: 14px;">Het kan heel effectief zijn om je vragen en dilemma&rsquo;s eens te bespreken met iemand die je wereld kent, maar er geen deel van uitmaakt. Een luisterend oor, iemand tegen wie je je verhaal kunt vertellen zonder je in te hoeven houden. Maar ook mogelijk confronterende feedback ontvangen of concreet advies krijgen voor het vervolg.&nbsp;</span></p>
+<p><span style="font-size: 14px;">In coaching komen soms zeer persoonlijke ervaringen en overtuigingen aan het licht die de professionele ontwikkeling van een individu be&iuml;nvloeden en soms belemmeren. Een luisterend oor, maar ook iemand die doorvraagt en niet oordeelt, kan helpen om de echte 'angel' van het vraagstuk op te sporen en onder ogen te komen.</span></p>
+<p><span style="font-size: 14px;">De gesprekken zijn vertrouwelijk. Een coachingstraject bestaat meestal uit vier of vijf gesprekken van anderhalf uur op de werkplek of elders. Over het algemeen kan je dan wel weer zelf verder.&nbsp;</span></p>
+<p><span style="font-size: 14px;">Takacs &amp; Verheijden doen zelf individuele coaching maar beschikt ook een uitgebreid netwerk van coaches met zeer diverse expertise, zodat altijd maatwerk geboden kan worden.</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+                      </div>
+                    </div>
+                  </div>
+			
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading2_2">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse2_2" aria-expanded="true" aria-controls="collapse2_2">
+                          INTERVISIE
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse2_2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2_2">
+                      <div class="panel-body">
+                	  	    <h3>Intervisie</h3><p><span style="font-size: 14px;">Intervisie is een snel aan populariteit winnende management-tool. Twee aannames spelen een belangrijke rol:</span></p>
+<ul>
+<li><span style="font-size: 14px;">elk probleem heeft ook met jezelf te maken, want een ander had het in jouw positie misschien niet;</span></li>
+<li><span style="font-size: 14px;">elk probleem heeft ook met de context te maken waarin het zich afspeelt, als je er vanaf een afstandje naar kijkt zie je vaak hoe het systeem zichzelf in stand houdt;&nbsp;</span></li>
+<li><span style="font-size: 14px;">je collega's hebben meer inhoudelijke expertise dan een externe coach, maar die kan wel het proces sturen zonder afgeleid te worden.&nbsp;</span></li>
+</ul>
+<p><span style="font-size: 14px;">Het werkt als volgt: je legt je vraag of dilemma voor aan een aantal niet-betrokken collega's. De intervisiebegeleider hanteert een tamelijk strikte methode om de vraag achter de vraag in beeld te krijgen. Daarna geven de anderen op een zeker moment aan wat het bij hen oproept en wat ze in jouw plaats zouden doen. Vaak herkennen de andere deelnemers je vraag wel - soms uit eigen ervaring.&nbsp;</span></p>
+<p><span style="font-size: 14px;">Intervisie bevordert zelfreflectie. Je leert daarnaast veel van de vraagstukken van anderen. Voor veel deelnemers werkt het ook bevrijdend om te merken dat ze niet de enige zijn met bepaalde problemen. In de dagelijkse cultuur van de academie en in de loopbaan van de wetenschapper wordt het open en kwetsbaar uiten van twijfels snel gezien als een brevet van onvermogen, waardoor veel mensen in hun eentje worstelen met vraagstukken.&nbsp;</span></p>
+<p><span style="font-size: 14px;">In intervisie wordt de gezamenlijke wijsheid van een groep mensen gekatalyserrd en optimaal benut. In een eerder stadium moet een veilige leersfeer en strikte vertrouwelijkheid zijn gerealiseerd, wil intervisie optimaal effectief zijn.</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+                      </div>
+                    </div>
+                  </div>
+			
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading2_3">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse2_3" aria-expanded="true" aria-controls="collapse2_3">
+                          VERANDERTRAJECTEN
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse2_3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2_3">
+                      <div class="panel-body">
+                	  	    <h3>Verandertrajecten</h3><p><span style="font-size: 14px;">Anderen meenemen: &lsquo;Leadership is relationship&rsquo;. Je moet het samen doen. Veel veranderingen worden gelegitimeerd door te wijzen naar boven of naar 'centraal'. Het moet, het is urgent, 'want anders....'&nbsp; Betrokkenen raken niet gemotiveerd en zijn ook geen eigenaar van het probleem. Dus gebeurt er niks. Of er wordt alleen lippendienst bewezen.&nbsp;</span></p>
+<p><span style="font-size: 14px;">Werkelijke veranderingen worden gevoed door ambitie - niet door urgentie. Door willen - niet door moeten. En door helder eigenaarschap voor de actieverantwoordelijken. Degene die de veranderingen initieert moet tevoorschijn komen, zich niet verbergen achter 'beleid', en weten om te gaan met de - vaak juiste - kritiek dat niet alle beslissingen 100% te rationaliseren zijn.&nbsp;</span></p>
+<p><span style="font-size: 14px;">Vragen waarbij we als adviseurs betrokken zijn:</span></p>
+<ul>
+<li><span style="font-size: 14px;">Hoe kunnen we meer cohesie organiseren binnen de afdeling, waar het gaat om het onderzoek?</span></li>
+<li><span style="font-size: 14px;">Hoe de 'sociale hygiene' in de groep bevorderen, zodat er meer ruimte is voor feedback en kritiek niet meteen als aanval wordt gezien?</span></li>
+<li><span style="font-size: 14px;">Hoe een goede match te vinden tussen de onderwijsdirectie en afdelingshoofden?</span></li>
+<li><span style="font-size: 14px;">Hoe valorisatie als speerpunt te laten landen in de afdelingen?</span></li>
+<li><span style="font-size: 14px;">Hoe kunnen we de universiteit&nbsp; internationaliseren &lsquo;aan de binnenkant&rsquo;?</span></li>
+<li><span style="font-size: 14px;">hoe de fusie tussen faculteiten zo te laten verlopen dat de ene faculteit zzich niet opgeslokt voelt door de andere?</span></li>
+<li><span style="font-size: 14px;">Hoe te komen tot een gedragen agenda voor de komende jaren?</span></li>
+</ul>
+<p><span style="font-size: 14px;">Belangrijk is om met de betrokkenen een goede start te maken, waarin de basis voor vertrouwen wederzijds wordt gelegd. Dat is cruciaal voor de stap erna: het maken van een &lsquo;choreografie&rsquo; voor de komende tijd.</span></p>
+<p><span style="font-size: 14px;">Een verandertraject bestaat meestal uit een aantal interventies die gaandeweg invulling krijgen. Denk hierbij aan strategiedagen, korte workshops, coachen van individuele medewerkers, bemiddeling, facilteren van gesprekken etc.</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+                      </div>
+                    </div>
+                  </div>
+			
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading2_4">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse2_4" aria-expanded="true" aria-controls="collapse2_4">
+                          LEIDERSCHAPSONTWIKKELING
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse2_4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2_4">
+                      <div class="panel-body">
+                	  	    <h3>Leiderschapsontwikkeling</h3><p><span style="font-size: 14px;">Heb je behoefte aan meer reflectie op je rol, je sterke punten en je dillemma's? Geef je leiding aan een groep en wil je de ontwikkeling hiervan stimuleren? Wil je je eindverantwoordelijkheid vormgeven zonder te micro-managen? Benieuwd hoe anderen het doen, hoe ze het op andere faculteiten doen? Geven procedures en bestuurlijke afspraken niet altijd houvast? Voor dit type vragen en dilemma&rsquo;s ontwerpen we programma's op maat.</span></p>
+<p><span style="font-size: 14px;">Onze leergang Academisch Leiderschap voor is een stevig en persoonlijk traject waarin de drie aspecten van leidinggeven de rode draad vormen:</span></p>
+<p style="padding-left: 30px;"><span style="font-size: 14px;">1. de goede dingen doen: wat wil je veranderen of bereiken en hoe houd je focus?</span></p>
+<p style="padding-left: 30px;"><span style="font-size: 14px;">2. de dingen goed doen: hoe organiseer je de implementatie slim met je mensen?</span></p>
+<p style="padding-left: 30px;"><span style="font-size: 14px;">3. de buitenwereld betrekken: hoe blijf je geinformeerd en zichtbaar buiten je eigen systeem?&nbsp;</span></p>
+<p><span style="font-size: 14px;">De vraagstukken van deelnemers staan centraal, aangevuld met direct toepasbare modellen. Deelnemers oefenen met minder ontwikkeld gedrag en krijgen zo een breder repertoir om te kunnen sturen in hun complexe werkelijkheid vol soms tegenstrijdige belangen</span></p>
+<p><span style="font-size: 14px;">De leergang wordt integraal of modulair aangeboden, afhankelijk van de vraag. Intakes en intervisie maken altijd deel uit van onze werkwijze. Voor meer informatie over programma's kan je contact opnemen met Barbara Takacs.&nbsp;</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+                      </div>
+                    </div>
+                  </div>
+			
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading2_5">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse2_5" aria-expanded="true" aria-controls="collapse2_5">
+                          SAMENWERKEN IN GROEPEN
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse2_5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2_5">
+                      <div class="panel-body">
+                	  	    <h3>Samenwerken in groepen</h3><p><span style="font-size: 14px;">Werken in groepsverband is voor autonome wetenschappers altijd een uitdaging. Mensen hebben verschillende idee&euml;n over samenwerking en vinden het gesprek daarover lastig. Er wordt veel tijd in groepen doorgebracht om informatie te verzamelen en besluiten te nemen over belangrijke inhoudelijke onderwerpen. Verbazingwekkend hoe weinig aandacht er vaak is voor de randvoorwaarden zoals richting, ruimte en rollen. Dat leidt dan tot eindeloze discussies tussen (een paar mensen) en energieverlies en dalende motivatie bij de rest.&nbsp;</span></p>
+<p><span style="font-size: 14px;">Wij werken met een heldere contractering aan de voorkant op de doelen van het 'vergaren' van je drukbezette mensen. Wat wil je na afloop van de bijeenkomst minimaal bereikt hebben met je collega's? Hoe kom je daar en wie kan je daar praktisch bij helpen? Samen zoeken we naar werkvormen die passen bij de doelen en het gedrag dat je wilt bevorderen.&nbsp;</span></p>
+<p><span style="font-size: 14px;">Wij helpen je de bijeenkomst voor te bereiden en het gesprek te voeren op doelen, rollen en inhoud en op de onderlinge dynamiek. Wij zijn gewend en bekwaam om de 'onderstroom' te bespreken als dat nodig is. Dit kan confronterend en spannend zijn, maar helder gaat voor aardig. Zodat duidelijk wordt wat behoeften en verwachtingen zijn. Verreweg het meeste gedoe komt echter voort uit onduidelijkheid over zaken in de bovenstroom.</span></p>
+<p><span style="font-size: 14px;">Een traject met een afdeling of leerstoelgroep bestaat uit een aantal bijeenkomsten waarin we de kussens eens flink opschudden zogezegd. Voorafgaand stellen wij je de volgende vragen: waar wil je als leider naar toe met je groep, hoe zie je dit traject voor je en wat verwacht je van ons? Dit is meteen een oefening in het expliciet maken van je wensen en spelregels We herhalen deze exercitie met de groep, zodat ieder medeverantwoordelijk kan zijn voor het vervolg.</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+                      </div>
+                    </div>
+                  </div>
+			
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading2_6">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse2_6" aria-expanded="true" aria-controls="collapse2_6">
+                          OPDRACHTGEVERS
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse2_6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2_6">
+                      <div class="panel-body">
+                	  	    <h3>Wij werken met de volgende universiteiten</h3><a href="fotoalbum.php?pageid=27" class="bttn">Ga verder</a>
+                      </div>
+                    </div>
+                  </div>
+			
+	   		  </div>
+		  </div>
+	 </div>
+	   
+	 <div class="row">
+	 	  <div class="col-sm-6 visible-xs no-padding"><img src="/web/20201201025647im_/http://takacs-verheijden.nl/figuren/2_boot1-eenvoud.jpg" border="0" class="img-responsive"/></div>
+	 	  <div class="col-sm-6 visible-xs txt-small"><p><span style="font-size: 14px;">De universiteit lijkt nergens op. Het is geen bedrijf maar wel een organisatie. Leidinggeven is hier wezenlijk iets anders dan elders in de maatschappij. Er is geen sprake van winst, maar rode cijfers bestaan wel en zijn verboden. Leidinggeven is vooral een dienst aan de gemeenschap en niet zoals elders: een stap vooruit in de loopbaan. Leidinggevende en leiding-ontvangende kunnen van positie wisselen, de verantwoordelijkheden zijn beduidend groter dan de bevoegdheden en de afwegingen die op de verschillende bestuurlijke niveaus gemaakt worden kunnen behoorlijk verschillen.</span></p>
+<p><span style="font-size: 14px;">Wetenschappers zijn intrinsiek zeer gedreven om het beste te geven in onderwijs, onderzoek en pati&euml;ntenzorg, maar goede intenties kunnen soms onbedoelde en zelfs desastreuze effecten hebben. Zelfreflectie, feedback, collegiale consultatie en open communicatie helpen om kritisch te blijven op jezelf en daarmee ruimte te scheppen voor een veilige en uitnodigende gemeenschap van medewerkers en studenten. Leidinggevenden spelen hier een cruciale rol.</span></p>
+<p class="p1"><span style="font-size: 14px;">Wij zijn zelf geen wetenschappers, maar we hebben wel genoeg ervaring om een andere invalshoek te kunnen bieden. Aan goede plannen en intenties ontbreekt het meestal niet. Wel blijkt het lastig om voornemens ook werkelijk uit te voeren. Soms helpt een flinke duw, een echt gesprek, of een paradoxale interventie om het bootje uit het riet te krijgen.</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p></div>
+	 </div>
+	
+	 <div class="row">
+	 	  <div class="col-sm-6 visible-xs">
+		  	   <div class="panel-group" id="accordion_xs_1" role="tablist" aria-multiselectable="true">
+	   
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading_xs_2_1">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion_xs_1" href="#collapse_xs_2_1" aria-expanded="true" aria-controls="collapse_xs_2_1">
+                          COACHING
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse_xs_2_1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_xs_2_1">
+                      <div class="panel-body">
+                	  	    <p><span style="font-size: 14px;">Het kan heel effectief zijn om je vragen en dilemma&rsquo;s eens te bespreken met iemand die je wereld kent, maar er geen deel van uitmaakt. Een luisterend oor, iemand tegen wie je je verhaal kunt vertellen zonder je in te hoeven houden. Maar ook mogelijk confronterende feedback ontvangen of concreet advies krijgen voor het vervolg.&nbsp;</span></p>
+<p><span style="font-size: 14px;">In coaching komen soms zeer persoonlijke ervaringen en overtuigingen aan het licht die de professionele ontwikkeling van een individu be&iuml;nvloeden en soms belemmeren. Een luisterend oor, maar ook iemand die doorvraagt en niet oordeelt, kan helpen om de echte 'angel' van het vraagstuk op te sporen en onder ogen te komen.</span></p>
+<p><span style="font-size: 14px;">De gesprekken zijn vertrouwelijk. Een coachingstraject bestaat meestal uit vier of vijf gesprekken van anderhalf uur op de werkplek of elders. Over het algemeen kan je dan wel weer zelf verder.&nbsp;</span></p>
+<p><span style="font-size: 14px;">Takacs &amp; Verheijden doen zelf individuele coaching maar beschikt ook een uitgebreid netwerk van coaches met zeer diverse expertise, zodat altijd maatwerk geboden kan worden.</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p><a href="fotoalbum.php?pageid=10" class="bttn">Ga verder</a>
+                      </div>
+                    </div>
+                  </div>
+			
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading_xs_2_2">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion_xs_1" href="#collapse_xs_2_2" aria-expanded="true" aria-controls="collapse_xs_2_2">
+                          INTERVISIE
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse_xs_2_2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_xs_2_2">
+                      <div class="panel-body">
+                	  	    <p><span style="font-size: 14px;">Intervisie is een snel aan populariteit winnende management-tool. Twee aannames spelen een belangrijke rol:</span></p>
+<ul>
+<li><span style="font-size: 14px;">elk probleem heeft ook met jezelf te maken, want een ander had het in jouw positie misschien niet;</span></li>
+<li><span style="font-size: 14px;">elk probleem heeft ook met de context te maken waarin het zich afspeelt, als je er vanaf een afstandje naar kijkt zie je vaak hoe het systeem zichzelf in stand houdt;&nbsp;</span></li>
+<li><span style="font-size: 14px;">je collega's hebben meer inhoudelijke expertise dan een externe coach, maar die kan wel het proces sturen zonder afgeleid te worden.&nbsp;</span></li>
+</ul>
+<p><span style="font-size: 14px;">Het werkt als volgt: je legt je vraag of dilemma voor aan een aantal niet-betrokken collega's. De intervisiebegeleider hanteert een tamelijk strikte methode om de vraag achter de vraag in beeld te krijgen. Daarna geven de anderen op een zeker moment aan wat het bij hen oproept en wat ze in jouw plaats zouden doen. Vaak herkennen de andere deelnemers je vraag wel - soms uit eigen ervaring.&nbsp;</span></p>
+<p><span style="font-size: 14px;">Intervisie bevordert zelfreflectie. Je leert daarnaast veel van de vraagstukken van anderen. Voor veel deelnemers werkt het ook bevrijdend om te merken dat ze niet de enige zijn met bepaalde problemen. In de dagelijkse cultuur van de academie en in de loopbaan van de wetenschapper wordt het open en kwetsbaar uiten van twijfels snel gezien als een brevet van onvermogen, waardoor veel mensen in hun eentje worstelen met vraagstukken.&nbsp;</span></p>
+<p><span style="font-size: 14px;">In intervisie wordt de gezamenlijke wijsheid van een groep mensen gekatalyserrd en optimaal benut. In een eerder stadium moet een veilige leersfeer en strikte vertrouwelijkheid zijn gerealiseerd, wil intervisie optimaal effectief zijn.</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+                      </div>
+                    </div>
+                  </div>
+			
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading_xs_2_3">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion_xs_1" href="#collapse_xs_2_3" aria-expanded="true" aria-controls="collapse_xs_2_3">
+                          VERANDERTRAJECTEN
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse_xs_2_3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_xs_2_3">
+                      <div class="panel-body">
+                	  	    <p><span style="font-size: 14px;">Anderen meenemen: &lsquo;Leadership is relationship&rsquo;. Je moet het samen doen. Veel veranderingen worden gelegitimeerd door te wijzen naar boven of naar 'centraal'. Het moet, het is urgent, 'want anders....'&nbsp; Betrokkenen raken niet gemotiveerd en zijn ook geen eigenaar van het probleem. Dus gebeurt er niks. Of er wordt alleen lippendienst bewezen.&nbsp;</span></p>
+<p><span style="font-size: 14px;">Werkelijke veranderingen worden gevoed door ambitie - niet door urgentie. Door willen - niet door moeten. En door helder eigenaarschap voor de actieverantwoordelijken. Degene die de veranderingen initieert moet tevoorschijn komen, zich niet verbergen achter 'beleid', en weten om te gaan met de - vaak juiste - kritiek dat niet alle beslissingen 100% te rationaliseren zijn.&nbsp;</span></p>
+<p><span style="font-size: 14px;">Vragen waarbij we als adviseurs betrokken zijn:</span></p>
+<ul>
+<li><span style="font-size: 14px;">Hoe kunnen we meer cohesie organiseren binnen de afdeling, waar het gaat om het onderzoek?</span></li>
+<li><span style="font-size: 14px;">Hoe de 'sociale hygiene' in de groep bevorderen, zodat er meer ruimte is voor feedback en kritiek niet meteen als aanval wordt gezien?</span></li>
+<li><span style="font-size: 14px;">Hoe een goede match te vinden tussen de onderwijsdirectie en afdelingshoofden?</span></li>
+<li><span style="font-size: 14px;">Hoe valorisatie als speerpunt te laten landen in de afdelingen?</span></li>
+<li><span style="font-size: 14px;">Hoe kunnen we de universiteit&nbsp; internationaliseren &lsquo;aan de binnenkant&rsquo;?</span></li>
+<li><span style="font-size: 14px;">hoe de fusie tussen faculteiten zo te laten verlopen dat de ene faculteit zzich niet opgeslokt voelt door de andere?</span></li>
+<li><span style="font-size: 14px;">Hoe te komen tot een gedragen agenda voor de komende jaren?</span></li>
+</ul>
+<p><span style="font-size: 14px;">Belangrijk is om met de betrokkenen een goede start te maken, waarin de basis voor vertrouwen wederzijds wordt gelegd. Dat is cruciaal voor de stap erna: het maken van een &lsquo;choreografie&rsquo; voor de komende tijd.</span></p>
+<p><span style="font-size: 14px;">Een verandertraject bestaat meestal uit een aantal interventies die gaandeweg invulling krijgen. Denk hierbij aan strategiedagen, korte workshops, coachen van individuele medewerkers, bemiddeling, facilteren van gesprekken etc.</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+                      </div>
+                    </div>
+                  </div>
+			
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading_xs_2_4">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion_xs_1" href="#collapse_xs_2_4" aria-expanded="true" aria-controls="collapse_xs_2_4">
+                          LEIDERSCHAPSONTWIKKELING
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse_xs_2_4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_xs_2_4">
+                      <div class="panel-body">
+                	  	    <p><span style="font-size: 14px;">Heb je behoefte aan meer reflectie op je rol, je sterke punten en je dillemma's? Geef je leiding aan een groep en wil je de ontwikkeling hiervan stimuleren? Wil je je eindverantwoordelijkheid vormgeven zonder te micro-managen? Benieuwd hoe anderen het doen, hoe ze het op andere faculteiten doen? Geven procedures en bestuurlijke afspraken niet altijd houvast? Voor dit type vragen en dilemma&rsquo;s ontwerpen we programma's op maat.</span></p>
+<p><span style="font-size: 14px;">Onze leergang Academisch Leiderschap voor is een stevig en persoonlijk traject waarin de drie aspecten van leidinggeven de rode draad vormen:</span></p>
+<p style="padding-left: 30px;"><span style="font-size: 14px;">1. de goede dingen doen: wat wil je veranderen of bereiken en hoe houd je focus?</span></p>
+<p style="padding-left: 30px;"><span style="font-size: 14px;">2. de dingen goed doen: hoe organiseer je de implementatie slim met je mensen?</span></p>
+<p style="padding-left: 30px;"><span style="font-size: 14px;">3. de buitenwereld betrekken: hoe blijf je geinformeerd en zichtbaar buiten je eigen systeem?&nbsp;</span></p>
+<p><span style="font-size: 14px;">De vraagstukken van deelnemers staan centraal, aangevuld met direct toepasbare modellen. Deelnemers oefenen met minder ontwikkeld gedrag en krijgen zo een breder repertoir om te kunnen sturen in hun complexe werkelijkheid vol soms tegenstrijdige belangen</span></p>
+<p><span style="font-size: 14px;">De leergang wordt integraal of modulair aangeboden, afhankelijk van de vraag. Intakes en intervisie maken altijd deel uit van onze werkwijze. Voor meer informatie over programma's kan je contact opnemen met Barbara Takacs.&nbsp;</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+                      </div>
+                    </div>
+                  </div>
+			
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading_xs_2_5">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion_xs_1" href="#collapse_xs_2_5" aria-expanded="true" aria-controls="collapse_xs_2_5">
+                          SAMENWERKEN IN GROEPEN
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse_xs_2_5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_xs_2_5">
+                      <div class="panel-body">
+                	  	    <p><span style="font-size: 14px;">Werken in groepsverband is voor autonome wetenschappers altijd een uitdaging. Mensen hebben verschillende idee&euml;n over samenwerking en vinden het gesprek daarover lastig. Er wordt veel tijd in groepen doorgebracht om informatie te verzamelen en besluiten te nemen over belangrijke inhoudelijke onderwerpen. Verbazingwekkend hoe weinig aandacht er vaak is voor de randvoorwaarden zoals richting, ruimte en rollen. Dat leidt dan tot eindeloze discussies tussen (een paar mensen) en energieverlies en dalende motivatie bij de rest.&nbsp;</span></p>
+<p><span style="font-size: 14px;">Wij werken met een heldere contractering aan de voorkant op de doelen van het 'vergaren' van je drukbezette mensen. Wat wil je na afloop van de bijeenkomst minimaal bereikt hebben met je collega's? Hoe kom je daar en wie kan je daar praktisch bij helpen? Samen zoeken we naar werkvormen die passen bij de doelen en het gedrag dat je wilt bevorderen.&nbsp;</span></p>
+<p><span style="font-size: 14px;">Wij helpen je de bijeenkomst voor te bereiden en het gesprek te voeren op doelen, rollen en inhoud en op de onderlinge dynamiek. Wij zijn gewend en bekwaam om de 'onderstroom' te bespreken als dat nodig is. Dit kan confronterend en spannend zijn, maar helder gaat voor aardig. Zodat duidelijk wordt wat behoeften en verwachtingen zijn. Verreweg het meeste gedoe komt echter voort uit onduidelijkheid over zaken in de bovenstroom.</span></p>
+<p><span style="font-size: 14px;">Een traject met een afdeling of leerstoelgroep bestaat uit een aantal bijeenkomsten waarin we de kussens eens flink opschudden zogezegd. Voorafgaand stellen wij je de volgende vragen: waar wil je als leider naar toe met je groep, hoe zie je dit traject voor je en wat verwacht je van ons? Dit is meteen een oefening in het expliciet maken van je wensen en spelregels We herhalen deze exercitie met de groep, zodat ieder medeverantwoordelijk kan zijn voor het vervolg.</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+                      </div>
+                    </div>
+                  </div>
+			
+                
+			
+	   		  </div>
+		  </div>
+	 </div>
+	   
+	 </section>
+	
+	 <section id="Over">
+	 <div class="row">
+	 	  <div class="col-sm-6 col-sm-offset-6 hidden-xs no-padding"><img src="/images/3_afbeelding3-site-nieuw.jpg" border="0" class="img-responsive"/></div>
+	 </div>
+	 <div class="row">
+	 	  <div class="col-sm-6 padding-top"><div class="h1 text-uppercase"><span id="stick2">Over</span></div></div>
+	 	  <div class="col-sm-6 hidden-xs txt-small">
+	<h2>Over ons</h2><p class="p1"><span style="font-size: 14px;"><span class="s1">Barbara heeft veel ervaring in leiderschapstrajecten &ndash; ook in internationale organisaties.&nbsp;</span><span class="s1">Ben was in de eerste helft van zijn loopbaan werkzaam in het onderwijs en heeft zich later toegelegd op coaching en transformatie. </span></span></p>
+<p class="p1"><span class="s1" style="font-size: 14px;">Zij werken met wetenschappers die uitblinken in hun vak, maar coaching kunnen gebruiken op het moment dat ze verantwoordelijk worden voor de resultaten van anderen.</span></p>
+<p><br class="Apple-interchange-newline"/><br/></p>
+		  </div>
+	 </div>
+	
+	 <div class="row">
+	 	  <div class="col-sm-6 hidden-xs col-sm-offset-6">
+		  	   <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+	   
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading4_1">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse4_1" aria-expanded="true" aria-controls="collapse4_1">
+                          BARBARA TAKACS
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse4_1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4_1">
+                      <div class="panel-body">
+                	  	    <h3>Barbara Takacs</h3><p><span style="font-size: 14px;">Barbara studeerde toegepaste sociale psychologie aan de UvA en ging daarna vol enthousiasme aan de slag als gedragstrainer. In de eerste jaren maakte zij vele vlieguren voor verschillende trainingsbureaus. Rechercheurs, vrouwelijke ambtenaren, talenten en managers uit allerlei sectoren kwamen voorbij om hun vaardigheden op te poetsen. De laatste jaren werkt zij uitsluitend voor universiteiten, omdat zij zich daar het meest op haar plaats voelt. Zij coacht individuele wetenschappers en hun teams een volgende stap te maken.&nbsp;</span></p>
+<p><span style="font-size: 14px;">Met Ben ontwerpt en faciliteert zij maatwerkprogramma&rsquo;s voor wetenschappers die leiding geven aan andere wetenschappers. Haar werkstijl is faciliterend, maar scherp waar nodig.&nbsp;Barbara woont in Haarlem met man en drie tieners. Zij reizen graag de wereld rond en genieten ook van lokale natuur. Yoga en hardlopen brengen haar tot rust.&nbsp;</span></p><p style="text-align:right;"><a href="https://www.linkedin.com/profile/view?id=ACgAAADzFVQBb9gKF1QO3oiCTT8jksMU6v9TmB4" target="_blank"><img src="/images/linkedin-icon.png" width="25" height="25" alt="" border="0">
+                      </div>
+                    </div>
+                  </div>
+			
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading4_2">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse4_2" aria-expanded="true" aria-controls="collapse4_2">
+                          BEN VERHEIJDEN
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse4_2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4_2">
+                      <div class="panel-body">
+                	  	    <h3>Ben Verheijden</h3><p><span style="font-size: 14px;">Ben studeerde nederlands aan de VU in de jaren 70. Daarna&nbsp;werd hij leraar, schooldecaan, conrector en vader, toen opeens een wervelwind hem meenam naar Transactionele Analyse en NLP, naar Reiki, Inner Child Work, Council en Vision Quest - en hem overal op de wereld cursussen deed volgen en geven.&nbsp;</span></p>
+<p><span style="font-size: 14px;">Toen er meer rust kwam legde hij zich toe op training en advieswerk in het hoger onderwijs. Daarnaast biedt hij in Time Alone mensen de gelegenheid zich terug te trekken en te luisteren naar wat ze diep in hun hart verlangen. En naar wat diep in hun hart van hen verlangd wordt.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p><p style="text-align:right;"><a href="/https://www.linkedin.com/profile/view?id=AAkAAAEG2h4BFGamJ_lT2FMPFxJpOChcvIqKvY4" target="_blank"><img src="/images/linkedin-icon.png" width="25" height="25" alt="" border="0">
+                      </div>
+                    </div>
+                  </div>
+			
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading4_3">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse4_3" aria-expanded="true" aria-controls="collapse4_3">
+                          NETWERK PARTNERS
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse4_3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4_3">
+                      <div class="panel-body">
+                	  	    <p><span style="font-size: 14px;"><a href=/https://www.linkedin.com/in/quasiba-zeggen-baab2b7/?originalSubdomain=nl">Quasiba Zeggen</a></span></p>
+<p><span style="font-size: 14px;"><span class="lt-line-clamp__line">Quasiba studeerde politicologie (MA) en later ook psychologie (BA) aan de UvA. Zij werkte twintig jaar in het hoger onderwijs als docent en managementrainer (o.a. Hotelschool). Quasiba heeft de sprong gewaagd om als zelfstandig professional verder te gaan. Zij ontwikkelt en geeft training op het gebied van leidiniggevende vaardigheden voor verschillende opdrachtgevers waaronder Takacs&amp;Verheijden. Haar focus ligt daarbij op communicatie. In haar optiek komt</span> <span class="lt-line-clamp__line">uiteindelijk alles neer op: Hoe breng je het?</span> <span class="lt-line-clamp__line">Dat kan gaan om feedback, slecht nieuws, coaching of samenwerking. </span></span></p>
+<p><span style="font-size: 14px;"><span class="lt-line-clamp__line">Een training van Quasiba is altijd maatwerk en sluit goed aan bij de visie en de missie van de</span> <span class="lt-line-clamp__line lt-line-clamp__line--last"> opdrachtgever. Zij </span>werkt met humor, compassie en duidelijkheid. Analytisch en empathisch. Ontwikkeling van leiderschap is ontwikkeling van een organisatie en haar medewerkers. Waar mensen elkaar verstaan wordt effici&euml;nt en met plezier gewerkt. <br/>&nbsp;</span></p>
+<p><span style="font-size: 14px;"><a href="https://www.linkedin.com/in/erika-pape-9926345b/?originalSubdomain=nl">Erika Pape</a></span></p>
+<p><span style="font-size: 14px;">Erika studeerde Onderwijskunde aan de RUG en is haar loopbaan begonnen als docente Onderwijskunde aan de lerarenopleiding in Groningen. Al snel maakte zij een switch richting het bedrijfsleven, waar ze 25 jaar in een corporate omgeving werkzaam was - eerst als marketing communicatie strateeg en later als HR professional. Sinds een paar jaar is Erika zelfstandig coach/teamcoach met ruim 20 jaar ervaring op de teller. Haar hart ligt bij talentontwikkeling, leiderschapontwikkeling en samenwerking. Erika heeft zich gespecialiseerd in het coachen van hoogleraren, docenten en executives. Daarnaast is zij opgeleid als teamcoach en brengt zij teams op een hoger plan. Ze houdt van reizen, grenzen verleggen, Haarlem, de duinen, de zee en haar drie studerende kinderen.</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+<p><span style="font-size: 14px;"><a href="http://www.frankenhuysen.nl/">Koosje van Frankenhuysen</a></span></p>
+<p>&nbsp;<span style="font-size: 14px;">Na haar studie Arbeids- en organisatiepsychologie aan de UVA is Koosje in 1996 direct voor zichzelf begonnen als trainer, coach en adviseur. De eerste 20 jaar heeft ze zich zo breed mogelijk willen ontwikkelen. Voor verschillende bureaus en een enorme diversiteit aan organisaties heeft ze zich vele onderwerpen eigen gemaakt. Momenteel focust ze zich op de drie hoofdthema&rsquo;s: Leiderschap, Vitaliteit en Teamontwikkeling. Prachtige containers waarin ze al die ervaring kwijt kan.</span></p>
+<p>&nbsp;<span style="font-size: 14px;">De uitdaging voor Koosje blijft om elke keer een uniek programma neer te zetten met een groep. Zij brengt zowel de deelnemer op een hoger plan en faciliteert de ontwikkeling van de organisatie. Vanuit openheid, een heldere structuur, eigen verantwoordelijkheid en een sfeer van veiligheid en vertrouwen werkt ze aan een tastbaar en positief resultaat.</span><span style="font-size: 14px;">Met een bourgondische levensstijl en liefde voor eten, kunst en cultuur geniet ze, samen met haar twee tieners, volop van het leven in hartje Amsterdam.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 14px;"><a href="https://www.linkedin.com/in/esther-schmal-b696174?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BHw5t14RjTpyGskL09qmapg%3D%3D">Esther Schmal</a> </span></p>
+<p><span style="font-size: 14px;">Na een korte flirt met de studie rechten (RUL) heeft Esther met veel plezier Politicologie (Internationale Betrekkingen) gestudeerd aan de UvA en de Freie Universit&auml;t Berlin. Om vervolgens iets heel anders te gaan doen: training en advies, gericht op het ontwikkelen van mensen en organisaties. Hierop volgde een aantal stevige HR rollen, bij o.m. TU/e, ASML en Avans. </span></p>
+<p><span style="font-size: 14px;">Sinds enkele jaren combineert zij Mid-Career &amp; executive coaching met organisatieadvies en het faciliteren van ontwikkeltrajecten. Zij werkt vanuit hoofd, hart en humor met m.n. hoogopgeleiden bij kennisinstellingen en hightech organisaties. De samenwerking met Takacs en Verheijden komt voor uit een persoonlijke en inhoudelijke klik op het gebied van strategie- en leiderschapsontwikkeling, en het systemisch kijken naar vraagstukken.</span><span style="font-size: 14px;">Esther woont met haar vriend in Brabant, spint en wandelt regelmatig, en houdt van duurzaamheid&nbsp; als in rommelmarkt, groentetuin en wildplukken.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 14px;"><a href="http://liesbethhalbertsma.nl/">Liesbeth Halbertsma</a></span></p>
+<p><span style="font-size: 14px;">Liesbeth is na haar studie Andragologie in Amsterdam gaan werken bij Boer &amp; Croon Management Consultants. Daarna is ze statutair directeur geweest van Nieuw Elan en van de Baak ManagementCentrum VNO-NCW.</span></p>
+<p><span style="font-size: 14px;">Ze werkt nu graag voor universiteiten, met teams of afdelingen die samen hun koers willen bepalen. Door een of meer werkconferenties met elkaar te ontwerpen en te beleven worden vaak belangrijke stappen gezet. Ook als de samenwerking minder loopt kan een hierop gerichte bijeenkomst met het team behulpzaam zijn. Zo werkt ze samen met opdrachtgevers samen aan de ontwikkeling van de toekomst van de organisatie. Liesbeth vindt veel inspiratie in haar werk. De laatste jaren richt ze zich bewust op het werken met jongeren en op haar rol als toezichthouder.</span></p>
+<p><span style="font-size: 14px;">Studeren en het doen van onderzoek nemen een belangrijke plaats in en leiden regelmatig tot publicaties.En ze geniet van het leven, samen met echtgenoot, de tuin en de kano.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 14px;">Jan Pieter Weening </span></p>
+<p><span style="font-size: 14px;">Jan Pieter studeerde Arbeids- en Organisatiepsychologie en Sociale Psychologie aan de Rijksuniversiteit Groningen. Na zijn studie heeft hij zich gericht op de ontwikkeling van mens en organisatie. </span><span style="font-size: 14px;">Uiteindelijk via drie jaar directe verbintenis met de RuG koos hij in 2009 voor het zelfstandige bestaan. Werkt nog steeds graag en veel als trainer/coach in de academie op het gebied van soft skills, teamontwikkeling en organisatieverbetering.</span></p>
+<p><span style="font-size: 14px;">Jan Pieter gelooft in beter, slimmer en leuker samenwerken. Door confrontatie, relativering, humor en authenticiteit te verbinden, worden zijn trainingen als zinvol en levendig ervaren. Hij werkt vanuit een positieve grondhouding en is ervan overtuigd dat zonder plezier resultaten niet beklijven. </span><span style="font-size: 14px;">Hij leeft samen met zijn vrouw en drie kinderen, is graag buiten en op reis, en sport is voor hem zowel inspanning alsook reflectie en ontspanning, &lsquo;mens sana in corpore sano&rsquo;.</span></p>
+<p>&nbsp;</p>
+                      </div>
+                    </div>
+                  </div>
+			
+	   		  </div>
+		  </div>
+	 </div>
+	   
+	 <div class="row">
+	 	  <div class="col-sm-6 visible-xs no-padding"><img src="/images/3_afbeelding3-site-nieuw.jpg" border="0" class="img-responsive"/></div>
+	 	  <div class="col-sm-6 visible-xs txt-small"><p class="p1"><span style="font-size: 14px;"><span class="s1">Barbara heeft veel ervaring in leiderschapstrajecten &ndash; ook in internationale organisaties.&nbsp;</span><span class="s1">Ben was in de eerste helft van zijn loopbaan werkzaam in het onderwijs en heeft zich later toegelegd op coaching en transformatie. </span></span></p>
+<p class="p1"><span class="s1" style="font-size: 14px;">Zij werken met wetenschappers die uitblinken in hun vak, maar coaching kunnen gebruiken op het moment dat ze verantwoordelijk worden voor de resultaten van anderen.</span></p>
+<p><br class="Apple-interchange-newline"/><br/></p></div>
+	 </div>
+	
+	 <div class="row">
+	 	  <div class="col-sm-6 visible-xs">
+		  	   <div class="panel-group" id="accordion_xs_2" role="tablist" aria-multiselectable="true">
+	   
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading_xs_4_1">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion_xs_2" href="#collapse_xs_4_1" aria-expanded="true" aria-controls="collapse_xs_4_1">
+                          BARBARA TAKACS
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse_xs_4_1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_xs_4_1">
+                      <div class="panel-body">
+                	  	    <p><span style="font-size: 14px;">Barbara studeerde toegepaste sociale psychologie aan de UvA en ging daarna vol enthousiasme aan de slag als gedragstrainer. In de eerste jaren maakte zij vele vlieguren voor verschillende trainingsbureaus. Rechercheurs, vrouwelijke ambtenaren, talenten en managers uit allerlei sectoren kwamen voorbij om hun vaardigheden op te poetsen. De laatste jaren werkt zij uitsluitend voor universiteiten, omdat zij zich daar het meest op haar plaats voelt. Zij coacht individuele wetenschappers en hun teams een volgende stap te maken.&nbsp;</span></p>
+<p><span style="font-size: 14px;">Met Ben ontwerpt en faciliteert zij maatwerkprogramma&rsquo;s voor wetenschappers die leiding geven aan andere wetenschappers. Haar werkstijl is faciliterend, maar scherp waar nodig.&nbsp;Barbara woont in Haarlem met man en drie tieners. Zij reizen graag de wereld rond en genieten ook van lokale natuur. Yoga en hardlopen brengen haar tot rust.&nbsp;</span></p>
+                      </div>
+                    </div>
+                  </div>
+			
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading_xs_4_2">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion_xs_2" href="#collapse_xs_4_2" aria-expanded="true" aria-controls="collapse_xs_4_2">
+                          BEN VERHEIJDEN
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse_xs_4_2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_xs_4_2">
+                      <div class="panel-body">
+                	  	    <p><span style="font-size: 14px;">Ben studeerde nederlands aan de VU in de jaren 70. Daarna&nbsp;werd hij leraar, schooldecaan, conrector en vader, toen opeens een wervelwind hem meenam naar Transactionele Analyse en NLP, naar Reiki, Inner Child Work, Council en Vision Quest - en hem overal op de wereld cursussen deed volgen en geven.&nbsp;</span></p>
+<p><span style="font-size: 14px;">Toen er meer rust kwam legde hij zich toe op training en advieswerk in het hoger onderwijs. Daarnaast biedt hij in Time Alone mensen de gelegenheid zich terug te trekken en te luisteren naar wat ze diep in hun hart verlangen. En naar wat diep in hun hart van hen verlangd wordt.</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+                      </div>
+                    </div>
+                  </div>
+			
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading_xs_4_3">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion_xs_2" href="#collapse_xs_4_3" aria-expanded="true" aria-controls="collapse_xs_4_3">
+                          NETWERK PARTNERS
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapse_xs_4_3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_xs_4_3">
+                      <div class="panel-body">
+                	  	    <p><span style="font-size: 14px;"><a href="https://www.linkedin.com/in/quasiba-zeggen-baab2b7/?originalSubdomain=nl">Quasiba Zeggen</a></span></p>
+<p><span style="font-size: 14px;"><span class="lt-line-clamp__line">Quasiba studeerde politicologie (MA) en later ook psychologie (BA) aan de UvA. Zij werkte twintig jaar in het hoger onderwijs als docent en managementrainer (o.a. Hotelschool). Quasiba heeft de sprong gewaagd om als zelfstandig professional verder te gaan. Zij ontwikkelt en geeft training op het gebied van leidiniggevende vaardigheden voor verschillende opdrachtgevers waaronder Takacs&amp;Verheijden. Haar focus ligt daarbij op communicatie. In haar optiek komt</span> <span class="lt-line-clamp__line">uiteindelijk alles neer op: Hoe breng je het?</span> <span class="lt-line-clamp__line">Dat kan gaan om feedback, slecht nieuws, coaching of samenwerking. </span></span></p>
+<p><span style="font-size: 14px;"><span class="lt-line-clamp__line">Een training van Quasiba is altijd maatwerk en sluit goed aan bij de visie en de missie van de</span> <span class="lt-line-clamp__line lt-line-clamp__line--last"> opdrachtgever. Zij </span>werkt met humor, compassie en duidelijkheid. Analytisch en empathisch. Ontwikkeling van leiderschap is ontwikkeling van een organisatie en haar medewerkers. Waar mensen elkaar verstaan wordt effici&euml;nt en met plezier gewerkt. <br/>&nbsp;</span></p>
+<p><span style="font-size: 14px;"><a href="https://www.linkedin.com/in/erika-pape-9926345b/?originalSubdomain=nl">Erika Pape</a></span></p>
+<p><span style="font-size: 14px;">Erika studeerde Onderwijskunde aan de RUG en is haar loopbaan begonnen als docente Onderwijskunde aan de lerarenopleiding in Groningen. Al snel maakte zij een switch richting het bedrijfsleven, waar ze 25 jaar in een corporate omgeving werkzaam was - eerst als marketing communicatie strateeg en later als HR professional. Sinds een paar jaar is Erika zelfstandig coach/teamcoach met ruim 20 jaar ervaring op de teller. Haar hart ligt bij talentontwikkeling, leiderschapontwikkeling en samenwerking. Erika heeft zich gespecialiseerd in het coachen van hoogleraren, docenten en executives. Daarnaast is zij opgeleid als teamcoach en brengt zij teams op een hoger plan. Ze houdt van reizen, grenzen verleggen, Haarlem, de duinen, de zee en haar drie studerende kinderen.</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+<p><span style="font-size: 14px;"><a href="http://www.frankenhuysen.nl/">Koosje van Frankenhuysen</a></span></p>
+<p>&nbsp;<span style="font-size: 14px;">Na haar studie Arbeids- en organisatiepsychologie aan de UVA is Koosje in 1996 direct voor zichzelf begonnen als trainer, coach en adviseur. De eerste 20 jaar heeft ze zich zo breed mogelijk willen ontwikkelen. Voor verschillende bureaus en een enorme diversiteit aan organisaties heeft ze zich vele onderwerpen eigen gemaakt. Momenteel focust ze zich op de drie hoofdthema&rsquo;s: Leiderschap, Vitaliteit en Teamontwikkeling. Prachtige containers waarin ze al die ervaring kwijt kan.</span></p>
+<p>&nbsp;<span style="font-size: 14px;">De uitdaging voor Koosje blijft om elke keer een uniek programma neer te zetten met een groep. Zij brengt zowel de deelnemer op een hoger plan en faciliteert de ontwikkeling van de organisatie. Vanuit openheid, een heldere structuur, eigen verantwoordelijkheid en een sfeer van veiligheid en vertrouwen werkt ze aan een tastbaar en positief resultaat.</span><span style="font-size: 14px;">Met een bourgondische levensstijl en liefde voor eten, kunst en cultuur geniet ze, samen met haar twee tieners, volop van het leven in hartje Amsterdam.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 14px;"><a href="https://www.linkedin.com/in/esther-schmal-b696174?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BHw5t14RjTpyGskL09qmapg%3D%3D">Esther Schmal</a> </span></p>
+<p><span style="font-size: 14px;">Na een korte flirt met de studie rechten (RUL) heeft Esther met veel plezier Politicologie (Internationale Betrekkingen) gestudeerd aan de UvA en de Freie Universit&auml;t Berlin. Om vervolgens iets heel anders te gaan doen: training en advies, gericht op het ontwikkelen van mensen en organisaties. Hierop volgde een aantal stevige HR rollen, bij o.m. TU/e, ASML en Avans. </span></p>
+<p><span style="font-size: 14px;">Sinds enkele jaren combineert zij Mid-Career &amp; executive coaching met organisatieadvies en het faciliteren van ontwikkeltrajecten. Zij werkt vanuit hoofd, hart en humor met m.n. hoogopgeleiden bij kennisinstellingen en hightech organisaties. De samenwerking met Takacs en Verheijden komt voor uit een persoonlijke en inhoudelijke klik op het gebied van strategie- en leiderschapsontwikkeling, en het systemisch kijken naar vraagstukken.</span><span style="font-size: 14px;">Esther woont met haar vriend in Brabant, spint en wandelt regelmatig, en houdt van duurzaamheid&nbsp; als in rommelmarkt, groentetuin en wildplukken.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 14px;"><a href="http://liesbethhalbertsma.nl/">Liesbeth Halbertsma</a></span></p>
+<p><span style="font-size: 14px;">Liesbeth is na haar studie Andragologie in Amsterdam gaan werken bij Boer &amp; Croon Management Consultants. Daarna is ze statutair directeur geweest van Nieuw Elan en van de Baak ManagementCentrum VNO-NCW.</span></p>
+<p><span style="font-size: 14px;">Ze werkt nu graag voor universiteiten, met teams of afdelingen die samen hun koers willen bepalen. Door een of meer werkconferenties met elkaar te ontwerpen en te beleven worden vaak belangrijke stappen gezet. Ook als de samenwerking minder loopt kan een hierop gerichte bijeenkomst met het team behulpzaam zijn. Zo werkt ze samen met opdrachtgevers samen aan de ontwikkeling van de toekomst van de organisatie. Liesbeth vindt veel inspiratie in haar werk. De laatste jaren richt ze zich bewust op het werken met jongeren en op haar rol als toezichthouder.</span></p>
+<p><span style="font-size: 14px;">Studeren en het doen van onderzoek nemen een belangrijke plaats in en leiden regelmatig tot publicaties.En ze geniet van het leven, samen met echtgenoot, de tuin en de kano.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 14px;">Jan Pieter Weening </span></p>
+<p><span style="font-size: 14px;">Jan Pieter studeerde Arbeids- en Organisatiepsychologie en Sociale Psychologie aan de Rijksuniversiteit Groningen. Na zijn studie heeft hij zich gericht op de ontwikkeling van mens en organisatie. </span><span style="font-size: 14px;">Uiteindelijk via drie jaar directe verbintenis met de RuG koos hij in 2009 voor het zelfstandige bestaan. Werkt nog steeds graag en veel als trainer/coach in de academie op het gebied van soft skills, teamontwikkeling en organisatieverbetering.</span></p>
+<p><span style="font-size: 14px;">Jan Pieter gelooft in beter, slimmer en leuker samenwerken. Door confrontatie, relativering, humor en authenticiteit te verbinden, worden zijn trainingen als zinvol en levendig ervaren. Hij werkt vanuit een positieve grondhouding en is ervan overtuigd dat zonder plezier resultaten niet beklijven. </span><span style="font-size: 14px;">Hij leeft samen met zijn vrouw en drie kinderen, is graag buiten en op reis, en sport is voor hem zowel inspanning alsook reflectie en ontspanning, &lsquo;mens sana in corpore sano&rsquo;.</span></p>
+<p>&nbsp;</p>
+                      </div>
+                    </div>
+                  </div>
+			
+	   		  </div>
+		  </div>
+	 </div>
+	   
+	 </section>
+	
+	 <section id="Contact">
+	 <div class="row">
+	 	  <div class="col-sm-6 col-sm-offset-6 hidden-xs no-padding"><img src="/web/20201201025647im_/http://takacs-verheijden.nl/figuren/16_afbeelding2-site.jpg" border="0" class="img-responsive"/></div>
+	 </div>
+	 <div class="row">
+	 	  <div class="col-sm-6 padding-top"><div class="h1 text-uppercase"><span id="stick3">Contact</span></div></div>
+	 	  <div class="col-sm-6 hidden-xs txt-small">
+	<h2>Contactgegevens</h2><p><strong style="font-size: 14px;">BARBARA TAKACS</strong></p>
+<p><span style="font-size: 14px;">+ 31 6 241 56731</span></p>
+<p><span style="font-size: 14px;"><a href="mailto:mail@barbaratakacs.nl">mail@barbaratakacs.nl</a></span></p>
+<p><span style="font-size: 14px;">Molenaerstraat 18</span></p>
+<p><span style="font-size: 14px;">2023 EK Haarlem</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 14px;"><strong>BEN VERHEIJDEN</strong></span></p>
+<p><span style="font-size: 14px;">+ 31 6 2466 7064</span></p>
+<p><span style="font-size: 14px;"><a href="mailto:benverheijden@me.com" target="_blank">benverheijden@me.com</a>&nbsp;</span></p>
+<p><span style="font-size: 14px;">Simon Carmiggeltstraat 56</span></p>
+<p><span style="font-size: 14px;">1822 MA Alkmaar</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+<p>&nbsp;</p>
+		  </div>
+	 </div>
+	
+	 <div class="row">
+	 	  <div class="col-sm-6 visible-xs no-padding"><img src="/images/16_afbeelding2-site.jpg" border="0" class="img-responsive"/></div>
+	 	  <div class="col-sm-6 visible-xs txt-small"><p><strong style="font-size: 14px;">BARBARA TAKACS</strong></p>
+<p><span style="font-size: 14px;">+ 31 6 241 56731</span></p>
+<p><span style="font-size: 14px;"><a href="mailto:mail@barbaratakacs.nl">mail@barbaratakacs.nl</a></span></p>
+<p><span style="font-size: 14px;">Molenaerstraat 18</span></p>
+<p><span style="font-size: 14px;">2023 EK Haarlem</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 14px;"><strong>BEN VERHEIJDEN</strong></span></p>
+<p><span style="font-size: 14px;">+ 31 6 2466 7064</span></p>
+<p><span style="font-size: 14px;"><a href="mailto:benverheijden@me.com" target="_blank">benverheijden@me.com</a>&nbsp;</span></p>
+<p><span style="font-size: 14px;">Simon Carmiggeltstraat 56</span></p>
+<p><span style="font-size: 14px;">1822 MA Alkmaar</span></p>
+<p><span style="font-size: 14px;">&nbsp;</span></p>
+<p>&nbsp;</p></div>
+	 </div>
+	
+	 </section>
+	
+</div>
+</body>
+</html>
